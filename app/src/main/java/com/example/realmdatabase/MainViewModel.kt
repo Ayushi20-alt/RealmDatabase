@@ -20,7 +20,9 @@ class MainViewModel:ViewModel() {
     // ui cant work with realmQuery<Courses> so it must be like a flow to be ablw to observe chnange and work with ui
     // so this is query and with room we can react to changes in database
     // we listen to the queries as flow and map into these normal list and saving as stateflow
-     val courses = realm.query<Course>().asFlow().map { results ->
+     val courses = realm.query<Course>(
+         "enrolledStrudents.name == $0", "John Junior"
+     ).asFlow().map { results ->
          results.list.toList()
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList()) // to use it as a state
 
