@@ -102,3 +102,7 @@ class MainViewModel:ViewModel() {
 fun unkown(){
     print("fdsf")
 }
+
+fun commitgit(){
+
+}
