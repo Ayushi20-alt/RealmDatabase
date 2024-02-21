@@ -100,5 +100,5 @@ class MainViewModel:ViewModel() {
 }
 
 fun gitpractice(){
-
+      println("hey there")
 }
