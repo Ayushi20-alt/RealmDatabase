@@ -99,6 +99,6 @@ class MainViewModel:ViewModel() {
      }
 }
 
-fun unkown(){
+fun gitpractice(){
 
 }
